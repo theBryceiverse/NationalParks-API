@@ -38,3 +38,12 @@ img {
 #js-max-results {
   display: block;
 }
+
+select {
+  width: 300px; 
+  height: 300px;
+}
+
+#js-max-results {
+  display: block;
+}
