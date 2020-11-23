@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YouTube video finder</title>
+    <title>National Park Finder</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="index.css">
 </head>
@@ -15,7 +15,7 @@
         <form id="js-form">
             <label for="js-search-term">Choose State</label>
             <!-- <input type="text" name="search-term" id="js-search-term" required> -->
-            <select name="search-term" id="js-search-term" required>
+            <select name="search-term" id="js-search-term" multiple size="51" required>
                 <option value="AL">Alabama (AL)</option>
                 <option value="AK">Alaska (AK)</option>
                 <option value="AZ">Arizona (AZ)</option>
@@ -68,7 +68,8 @@
                 <option value="WI">Wisconsin (WI)</option>
                 <option value="WY">Wyoming (WY)</option>
             </select>	<!-- https://www.freeformatter.com/usa-state-list-html-select.html -->	
-            		
+            <h2>Click and drag to select multiple states or use "CTRL" plus Clicks</h2>
+
             <label for="js-max-results">Number of Parks</label>
             <input type="number" name="max-results" id="js-max-results" value="10">
 
