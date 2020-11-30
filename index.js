@@ -1,3 +1,5 @@
+'use strict';
+
 const apiKey = 'AAwRZXJN82UphfbxWJMgB7mBAMyiR7s4AYRHsIVJ'
 const searchURL = 'https://developer.nps.gov/api/v1/parks' //  '/parks' could be a variable 
 
@@ -26,7 +28,7 @@ function displayResults(responseJson) {
   $('#results').removeClass('hidden');
 }; 
 
-function getYouTubeVideos(query, maxResults) {
+function getDisplayParks(query, maxResults) {
   const params = {
     stateCode: query,
     limit: maxResults,
@@ -57,17 +59,8 @@ function watchForm() {
     //console.log(searchTerm);
     //decodeURIComponent(searchTerm); 
     const maxResults = $('#js-max-results').val();
-    getYouTubeVideos(searchTerm, maxResults);
+    getDisplayParks(searchTerm, maxResults);
   });
 }
 
 $(watchForm);
-
-
-//if you call multiple states "WA,OR" for example, if any parks exist between the two of them it will only list the park once. So, the "total" will only reflect the total number of different parks
-//function isSelected(){
-//   $('select').on('click', 'option', function(){
-//     $(this).attr('selected'); 
-//      //console.log("option slected");
-//    }); 
-//  }; isSelected();
